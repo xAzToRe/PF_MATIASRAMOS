@@ -1,0 +1,254 @@
+/* Estilos generales */
+* {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo en el encabezado */
+.logo-header {
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circular-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Banner */
+.banner {
+    background-image: url('../assets/alto-angulo-spa-miel-flores-algodon.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    position: relative;
+}
+
+/* Menú de navegación */
+.menu-list {
+    background-color: #ec98e1;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Estilo de enlace en la navbar */
+.menu-list a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Hover sobre enlaces de la navbar */
+.menu-list a:hover {
+    background-color: #7e2773;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Lista sin estilos */
+ul li {
+    list-style: none;
+}
+
+/* Estilo de enlace */
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo de texto centrado */
+.content-center {
+    text-align: center;
+}
+
+/* Estilo del título */
+.title-cera {
+    font-weight: 900;
+    font-size: 4em;
+    color: #ec98e1;
+    margin-bottom: 20px;
+}
+
+/* Estilo de la tarjeta */
+.card {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-img2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+/* Espaciado de párrafo */
+.paragraph-spacing {
+    margin-bottom: 20px;
+}
+
+/* Lista estilizada */
+.styled-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.styled-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.styled-list li:before {
+    content: "\2022";
+    color: #ec98e1;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Estilos específicos para la página de conocenos */
+.page-conocenos main article img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+}
+
+.page-conocenos main article h2,
+.page-conocenos main article p {
+    margin-left: 190px;
+}
+
+/* Estilos de la tabla de comparación */
+.mr-table {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.mr-table th, .mr-table td {
+    padding: 10px;
+    background: linear-gradient(to right, #ec98e1, #7e2773);
+    color: #fff;
+    border: 2px solid #040404;
+    border-width: 3px;
+}
+
+.mr-table th {
+    text-align: center;
+}
+
+.mr-table tbody tr:nth-child(odd) {
+    background-color: #ec98e1;
+}
+
+.mr-table tbody tr:nth-child(odd) td {
+    border: 2px solid #ff00ff;
+    border-width: 3px;
+}
+
+.mr-video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.mr-video {
+    width: 400px;
+    height: 300px;
+}
+
+.additional-content {
+    width: calc(100% - 420px); /* Ajusta según el ancho del video y el espacio deseado */
+    padding-left: 20px; /* Ajusta según el espaciado deseado */
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #ec98e1;
+    padding: 20px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del menú de navegación en el pie de página */
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Estilos para los íconos sociales en el footer */
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+/* Estilos del logo en el pie de página */
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
