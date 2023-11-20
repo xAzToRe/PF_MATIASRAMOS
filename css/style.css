@@ -7,6 +7,22 @@
     box-sizing: border-box;
 }
 
+/* Fondo de la página */
+body {
+    background-image: url('../assets/zen-stones-sand-background-health-wellness-concept.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Para mantener el fondo fijo mientras se desplaza la página */
+    color: #fff; /* Color principal del texto */
+    
+}
+
+/* Agregamos un fondo negro semitransparente al texto */
+.text-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+    padding: 20px; /* Ajusta según necesidades de diseño */
+}
+
 /* Contenedor principal */
 .container {
     max-width: 1200px;
@@ -46,6 +62,7 @@
 /* Menú de navegación */
 .navbar {
     margin-bottom: 20px; /* Ajusta según necesidades de diseño */
+    background-color: transparent; /* Navbar con fondo transparente */
 }
 
 .menu-list {
@@ -55,11 +72,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     list-style: none;
     padding: 0;
-}
-
-.menu-list li {
-    display: inline;
-    margin-right: 20px;
 }
 
 /* Estilo de enlace en la navbar */
@@ -100,6 +112,25 @@ ul li a {
     margin-bottom: 20px;
 }
 
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767.98px) {
+    .image-table-container {
+        flex-direction: column-reverse; /* Cambia la dirección de la columna */
+    }
+
+    .image-wrapper,
+    .table-wrapper {
+        width: 100%; /* Ancho completo en dispositivos móviles */
+    }
+
+    .image-wrapper img {
+        border-radius: 10px; /* Ajusta el borde redondeado de la imagen */
+        margin-bottom: 20px; /* Agrega espacio entre la imagen y la tabla */
+    }
+}
+
+
 /* Estilos para el menú de hamburguesa en la versión móvil */
 @media (max-width: 768px) {
     .navbar-toggler {
@@ -119,12 +150,15 @@ ul li a {
         width: 100%;
         padding: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1001; /* Asegura que esté por encima del contenido principal */
     }
 
     .menu-list {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative; /* Añade posición relativa para ajustar el z-index de los enlaces hijos */
+        z-index: 1002; /* Asegura que los enlaces estén por encima del contenido principal */
     }
 
     .menu-list li {
@@ -185,17 +219,42 @@ ul li a {
 }
 
 /* Estilos específicos para la página de conocenos */
-.page-conocenos main article img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px;
+.page-conocenos main article p {
+    background-color: rgba(224, 119, 119, 0.5); /* Fondo blanco semitransparente */
+    padding: 20px; /* Ajusta según necesidades de diseño */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
-.page-conocenos main article h2,
+.page-conocenos main article p::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Estilos adicionales para mejorar la legibilidad del número de teléfono y agregar un emoticono */
+.page-conocenos main article a {
+    font-size: 1.2em; /* Ajusta según tus preferencias */
+    display: flex;
+    align-items: center;
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.page-conocenos main article a::before {
+    content: '\260E '; /* Unicode para el emoticono de teléfono */
+    font-size: 1.5em;
+    margin-right: 5px; /* Ajusta según tus preferencias */
+}
+
+/* Restaurar el estilo del texto central en la página de conocenos */
+.page-conocenos main article h2 {
+    margin-left: 0;
+}
+
 .page-conocenos main article p {
-    margin-left: 190px;
+    margin-left: 0;
 }
 
 /* Estilos de la tabla de comparación */
@@ -282,9 +341,207 @@ footer {
     margin-right: 20px;
 }
 
+/* Añade estos estilos para los h1 */
+.title-cera {
+    font-weight: 900;
+    font-size: 4em;
+    color: #ec98e1; /* Color rosa original */
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Evita que el degradado sobresalga del área del texto */
+}
+
+/* Estilo adicional para el h1 */
+.title-cera::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ec98e1, #7e2773); /* Gradiente de colores */
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -1; /* Coloca el degradado detrás del texto */
+}
+
+/* Animación sutil para el h1 */
+.title-cera:hover {
+    color: #aa0b94; /* Cambia el color del texto al hacer hover para mejorar la legibilidad */
+    transition: color 0.3s ease;
+}
+
+/* Agrega estos estilos para mejorar la legibilidad del texto en la sección principal */
+.main p {
+    background-color: rgba(224, 119, 119, 0.5); /* Fondo blanco semitransparente */
+    padding: 20px; /* Ajusta según necesidades de diseño */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Aplica un float para que el texto flote sobre el fondo */
+.main p::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* Estilos del logo en el pie de página */
 .logo img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+}
+
+/* Agrega estilos para los enlaces dentro de .phone y .email */
+.phone a,
+.email a {
+    color: #fff; /* Cambia el color del texto */
+    text-decoration: underline; /* Subraya los enlaces */
+}
+
+/* Agrega estilos para el icono de teléfono */
+.phone i {
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+}
+
+/* Agrega estilos para el icono de correo electrónico */
+.email i {
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+}
+
+/* Agregamos estilos específicos para la página de Ventajas */
+.ventajas-page .special-h2 {
+    /* Estilos especiales para h2 */
+    font-weight: bold;
+    font-size: 2.5em;
+    color: #ec98e1; /* Cambiar según tus preferencias */
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer; /* Añade un cursor de puntero al pasar por encima */
+    transition: color 0.3s ease; /* Agrega una transición al color al hacer hover */
+}
+
+.ventajas-page .special-h2::before {
+    /* Efecto de sombra */
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ec98e1, #7e2773);
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.ventajas-page .special-h2:hover {
+    /* Cambia el color del texto al hacer hover */
+    color: #aa0b94;
+}
+
+.ventajas-content .styled-paragraph {
+    /* Estilos para párrafos */
+    background-color: rgba(223, 94, 94, 0.8); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.ventajas-content .styled-list {
+    /* Estilos para listas */
+    list-style: none;
+    padding: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.ventajas-content .styled-list li {
+    /* Estilos para elementos de lista */
+    position: relative;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Agrega una transición al color de fondo al hacer hover */
+}
+
+.ventajas-content .styled-list li:hover {
+    /* Cambia el color de fondo al hacer hover */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Estilos para tablas */
+.ventajas-content .styled-table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.ventajas-content .styled-table th, .ventajas-content .styled-table td {
+    padding: 15px;
+    background: linear-gradient(to right, #ec98e1, #7e2773);
+    color: #ffffff;
+    border: 1px solid #040404;
+}
+
+.ventajas-content .styled-table th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.ventajas-content .styled-table tbody tr:nth-child(odd) {
+    background-color: #ec98e1;
+}
+
+.ventajas-content .styled-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.ventajas-content .styled-table tbody tr td {
+    border: 1px solid #040404;
+}
+
+/* Hover effect */
+.ventajas-content .styled-table tbody tr:hover {
+    background-color: #ffccff; /* Cambia el color al hacer hover */
+}
+
+.image-table-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.image-wrapper {
+    flex: 1;
+    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+    margin-right: 20px; /* Espacio entre la imagen y la tabla */
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.table-wrapper {
+    flex: 2;
+    max-width: calc(100% - 340px); /* Ajusta según sea necesario para el espacio disponible */
+}
+
+.table.comparison-table {
+    width: 100%;
+    /* Añade estilos adicionales según tus preferencias */
 }
