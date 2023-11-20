@@ -1,0 +1,46 @@
+/* Estilos del pie de página */
+footer {
+    background-color: #ec98e1;
+    padding: 20px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del menú de navegación en el pie de página */
+.menu-list {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Estilos para los íconos sociales en el footer */
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+
+
+
+/* Estilos del logo en el pie de página */
+.logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

@@ -1,0 +1,127 @@
+/* Estilos generales */
+* {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo de la página */
+body {
+    background-image: url('../assets/zen-stones-sand-background-health-wellness-concept.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Para mantener el fondo fijo mientras se desplaza la página */
+    color: #fff; /* Color principal del texto */
+    
+}
+
+/* Agregamos un fondo negro semitransparente al texto */
+.text-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+    padding: 20px; /* Ajusta según necesidades de diseño */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Lista sin estilos */
+ul li {
+    list-style: none;
+}
+
+
+/* Estilo de enlace */
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilo de texto centrado */
+.content-center {
+    text-align: center;
+}
+
+/* Estilo del título */
+.title-cera {
+    font-weight: 900;
+    font-size: 4em;
+    color: #ec98e1;
+    margin-bottom: 20px;
+}
+
+/* Añade estos estilos para los h1 */
+.title-cera {
+    font-weight: 900;
+    font-size: 4em;
+    color: #ec98e1; /* Color rosa original */
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Evita que el degradado sobresalga del área del texto */
+}
+
+/* Estilo adicional para el h1 */
+.title-cera::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(to right, #ec98e1, #7e2773); /* Gradiente de colores */
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: -1; /* Coloca el degradado detrás del texto */
+}
+
+/* Animación sutil para el h1 */
+.title-cera:hover {
+    color: #aa0b94; /* Cambia el color del texto al hacer hover para mejorar la legibilidad */
+    transition: color 0.3s ease;
+}
+
+/* Agrega estos estilos para mejorar la legibilidad del texto en la sección principal */
+.main p {
+    background-color: rgba(224, 119, 119, 0.5); /* Fondo blanco semitransparente */
+    padding: 20px; /* Ajusta según necesidades de diseño */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Aplica un float para que el texto flote sobre el fondo */
+.main p::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Agrega estilos para los enlaces dentro de .phone y .email */
+.phone a,
+.email a {
+    color: #fff; /* Cambia el color del texto */
+    text-decoration: underline; /* Subraya los enlaces */
+}
+
+
+/* Agrega estilos para los enlaces dentro de .phone y .email */
+.phone a,
+.email a {
+    color: #fff; /* Cambia el color del texto */
+    text-decoration: underline; /* Subraya los enlaces */
+}
+
+/* Agrega estilos para el icono de teléfono */
+.phone i {
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+}
+
+/* Agrega estilos para el icono de correo electrónico */
+.email i {
+    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+}

@@ -1,0 +1,46 @@
+/* Estilos de la tabla de comparación */
+.mr-table {
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.mr-table th, .mr-table td {
+    padding: 10px;
+    background: linear-gradient(to right, #ec98e1, #7e2773);
+    color: #fff;
+    border: 2px solid #040404;
+    border-width: 3px;
+}
+
+.mr-table th {
+    text-align: center;
+}
+
+.mr-table tbody tr:nth-child(odd) {
+    background-color: #ec98e1;
+}
+
+.mr-table tbody tr:nth-child(odd) td {
+    border: 2px solid #ff00ff;
+    border-width: 3px;
+}
+
+.mr-video-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.mr-video {
+    width: 400px;
+    height: 300px;
+}
+
+.additional-content {
+    width: calc(100% - 420px); /* Ajusta según el ancho del video y el espacio deseado */
+    padding-left: 20px; /* Ajusta según el espaciado deseado */
+}

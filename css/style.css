@@ -1,547 +1,517 @@
+@charset "UTF-8";
 /* Estilos generales */
 * {
-    font-family: 'Playfair Display', serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Fondo de la página */
 body {
-    background-image: url('../assets/zen-stones-sand-background-health-wellness-concept.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Para mantener el fondo fijo mientras se desplaza la página */
-    color: #fff; /* Color principal del texto */
-    
+  background-image: url("../assets/zen-stones-sand-background-health-wellness-concept.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Para mantener el fondo fijo mientras se desplaza la página */
+  color: #fff; /* Color principal del texto */
 }
 
 /* Agregamos un fondo negro semitransparente al texto */
 .text-overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
-    padding: 20px; /* Ajusta según necesidades de diseño */
+  background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+  padding: 20px; /* Ajusta según necesidades de diseño */
 }
 
 /* Contenedor principal */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Logo en el encabezado */
-.logo-header {
-    background-color: transparent;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 150px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.circular-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Banner */
-.banner {
-    background-image: url('../assets/alto-angulo-spa-miel-flores-algodon.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    position: relative;
-}
-
-/* Menú de navegación */
-.navbar {
-    margin-bottom: 20px; /* Ajusta según necesidades de diseño */
-    background-color: transparent; /* Navbar con fondo transparente */
-}
-
-.menu-list {
-    background-color: #ec98e1;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 0;
-}
-
-/* Estilo de enlace en la navbar */
-.menu-list a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-}
-
-/* Hover sobre enlaces de la navbar */
-.menu-list a:hover {
-    background-color: #7e2773;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Lista sin estilos */
 ul li {
-    list-style: none;
+  list-style: none;
 }
 
 /* Estilo de enlace */
 ul li a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 /* Estilo de texto centrado */
 .content-center {
-    text-align: center;
+  text-align: center;
 }
 
 /* Estilo del título */
 .title-cera {
-    font-weight: 900;
-    font-size: 4em;
-    color: #ec98e1;
-    margin-bottom: 20px;
-}
-
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 767.98px) {
-    .image-table-container {
-        flex-direction: column-reverse; /* Cambia la dirección de la columna */
-    }
-
-    .image-wrapper,
-    .table-wrapper {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-    }
-
-    .image-wrapper img {
-        border-radius: 10px; /* Ajusta el borde redondeado de la imagen */
-        margin-bottom: 20px; /* Agrega espacio entre la imagen y la tabla */
-    }
-}
-
-
-/* Estilos para el menú de hamburguesa en la versión móvil */
-@media (max-width: 768px) {
-    .navbar-toggler {
-        background-color: #ec98e1;
-        border: none;
-    }
-
-    .navbar-toggler-icon {
-        background-color: #fff; /* Color del icono de hamburguesa */
-    }
-
-    .collapse.navbar-collapse {
-        background-color: #ec98e1;
-        position: absolute;
-        top: 60px; /* Ajusta según la altura del banner */
-        left: 0;
-        width: 100%;
-        padding: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1001; /* Asegura que esté por encima del contenido principal */
-    }
-
-    .menu-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative; /* Añade posición relativa para ajustar el z-index de los enlaces hijos */
-        z-index: 1002; /* Asegura que los enlaces estén por encima del contenido principal */
-    }
-
-    .menu-list li {
-        margin: 10px 0;
-    }
-}
-
-/* Estilo de la tarjeta */
-.card {
-    width: 70%;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card-img {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.card-img2 {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    float: left;
-    margin-right: 20px;
-}
-
-/* Espaciado de párrafo */
-.paragraph-spacing {
-    margin-bottom: 20px;
-}
-
-/* Lista estilizada */
-.styled-list {
-    list-style: none;
-    padding: 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.styled-list li {
-    position: relative;
-    padding-left: 20px;
-}
-
-.styled-list li:before {
-    content: "\2022";
-    color: #ec98e1;
-    font-size: 1.5em;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-/* Estilos específicos para la página de conocenos */
-.page-conocenos main article p {
-    background-color: rgba(224, 119, 119, 0.5); /* Fondo blanco semitransparente */
-    padding: 20px; /* Ajusta según necesidades de diseño */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado suave */
-    margin-bottom: 20px; /* Espaciado inferior */
-}
-
-.page-conocenos main article p::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Estilos adicionales para mejorar la legibilidad del número de teléfono y agregar un emoticono */
-.page-conocenos main article a {
-    font-size: 1.2em; /* Ajusta según tus preferencias */
-    display: flex;
-    align-items: center;
-    color: #fff; /* Color del texto */
-    text-decoration: none; /* Quitar subrayado del enlace */
-}
-
-.page-conocenos main article a::before {
-    content: '\260E '; /* Unicode para el emoticono de teléfono */
-    font-size: 1.5em;
-    margin-right: 5px; /* Ajusta según tus preferencias */
-}
-
-/* Restaurar el estilo del texto central en la página de conocenos */
-.page-conocenos main article h2 {
-    margin-left: 0;
-}
-
-.page-conocenos main article p {
-    margin-left: 0;
-}
-
-/* Estilos de la tabla de comparación */
-.mr-table {
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-collapse: separate;
-    border-spacing: 10px;
-}
-
-.mr-table th, .mr-table td {
-    padding: 10px;
-    background: linear-gradient(to right, #ec98e1, #7e2773);
-    color: #fff;
-    border: 2px solid #040404;
-    border-width: 3px;
-}
-
-.mr-table th {
-    text-align: center;
-}
-
-.mr-table tbody tr:nth-child(odd) {
-    background-color: #ec98e1;
-}
-
-.mr-table tbody tr:nth-child(odd) td {
-    border: 2px solid #ff00ff;
-    border-width: 3px;
-}
-
-.mr-video-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-}
-
-.mr-video {
-    width: 400px;
-    height: 300px;
-}
-
-.additional-content {
-    width: calc(100% - 420px); /* Ajusta según el ancho del video y el espacio deseado */
-    padding-left: 20px; /* Ajusta según el espaciado deseado */
-}
-
-/* Estilos del pie de página */
-footer {
-    background-color: #ec98e1;
-    padding: 20px;
-    color: #fff;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Estilos del menú de navegación en el pie de página */
-.menu-list {
-    list-style: none;
-    padding: 0;
-}
-
-.menu-list li {
-    display: inline;
-    margin-right: 20px;
-}
-
-/* Estilos para los íconos sociales en el footer */
-.social-icons {
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
-}
-
-.social-icons a {
-    color: #ffffff;
-    font-size: 40px;
-    margin-right: 20px;
+  font-weight: 900;
+  font-size: 4em;
+  color: #ec98e1;
+  margin-bottom: 20px;
 }
 
 /* Añade estos estilos para los h1 */
 .title-cera {
-    font-weight: 900;
-    font-size: 4em;
-    color: #ec98e1; /* Color rosa original */
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center;
-    overflow: hidden; /* Evita que el degradado sobresalga del área del texto */
+  font-weight: 900;
+  font-size: 4em;
+  color: #ec98e1; /* Color rosa original */
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden; /* Evita que el degradado sobresalga del área del texto */
 }
 
 /* Estilo adicional para el h1 */
 .title-cera::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #ec98e1, #7e2773); /* Gradiente de colores */
-    bottom: 0;
-    left: 0;
-    border-radius: 5px;
-    z-index: -1; /* Coloca el degradado detrás del texto */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right, #ec98e1, #7e2773); /* Gradiente de colores */
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: -1; /* Coloca el degradado detrás del texto */
 }
 
 /* Animación sutil para el h1 */
 .title-cera:hover {
-    color: #aa0b94; /* Cambia el color del texto al hacer hover para mejorar la legibilidad */
-    transition: color 0.3s ease;
+  color: #aa0b94; /* Cambia el color del texto al hacer hover para mejorar la legibilidad */
+  transition: color 0.3s ease;
 }
 
 /* Agrega estos estilos para mejorar la legibilidad del texto en la sección principal */
 .main p {
-    background-color: rgba(224, 119, 119, 0.5); /* Fondo blanco semitransparente */
-    padding: 20px; /* Ajusta según necesidades de diseño */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado suave */
-    margin-bottom: 20px; /* Espaciado inferior */
+  background-color: rgba(224, 119, 119, 0.5); /* Fondo blanco semitransparente */
+  padding: 20px; /* Ajusta según necesidades de diseño */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombreado suave */
+  margin-bottom: 20px; /* Espaciado inferior */
 }
 
 /* Aplica un float para que el texto flote sobre el fondo */
 .main p::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Estilos del logo en el pie de página */
-.logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Agrega estilos para los enlaces dentro de .phone y .email */
 .phone a,
 .email a {
-    color: #fff; /* Cambia el color del texto */
-    text-decoration: underline; /* Subraya los enlaces */
+  color: #fff; /* Cambia el color del texto */
+  text-decoration: underline; /* Subraya los enlaces */
+}
+
+/* Agrega estilos para los enlaces dentro de .phone y .email */
+.phone a,
+.email a {
+  color: #fff; /* Cambia el color del texto */
+  text-decoration: underline; /* Subraya los enlaces */
 }
 
 /* Agrega estilos para el icono de teléfono */
 .phone i {
-    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+  margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
 }
 
 /* Agrega estilos para el icono de correo electrónico */
 .email i {
-    margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+  margin-right: 5px; /* Ajusta el espacio entre el icono y el texto si es necesario */
+}
+
+/* Logo en el encabezado */
+.logo-header {
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 150px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.circular-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Banner */
+.banner {
+  background-image: url("../assets/alto-angulo-spa-miel-flores-algodon.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+}
+
+/* Menú de navegación */
+.navbar {
+  margin-bottom: 20px; /* Ajusta según necesidades de diseño */
+  background-color: transparent; /* Navbar con fondo transparente */
+}
+
+.menu-list {
+  background-color: #ec98e1;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilo de enlace en la navbar */
+.menu-list a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Hover sobre enlaces de la navbar */
+.menu-list a:hover {
+  background-color: #7e2773;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Lista estilizada */
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.styled-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.styled-list li:before {
+  content: "•";
+  color: #ec98e1;
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: #ec98e1;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos del menú de navegación en el pie de página */
+.menu-list {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-list li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Estilos para los íconos sociales en el footer */
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+/* Estilos del logo en el pie de página */
+.logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767.98px) {
+  .image-table-container {
+    flex-direction: column-reverse; /* Cambia la dirección de la columna */
+  }
+  .image-wrapper,
+  .table-wrapper {
+    width: 100%; /* Ancho completo en dispositivos móviles */
+  }
+  .image-wrapper img {
+    border-radius: 10px; /* Ajusta el borde redondeado de la imagen */
+    margin-bottom: 20px; /* Agrega espacio entre la imagen y la tabla */
+  }
+}
+/* Estilos para el menú de hamburguesa en la versión móvil */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    background-color: #ec98e1;
+    border: none;
+  }
+  .navbar-toggler-icon {
+    background-color: #fff; /* Color del icono de hamburguesa */
+  }
+  .collapse.navbar-collapse {
+    background-color: #ec98e1;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del banner */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001; /* Asegura que esté por encima del contenido principal */
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Añade posición relativa para ajustar el z-index de los enlaces hijos */
+    z-index: 1002; /* Asegura que los enlaces estén por encima del contenido principal */
+  }
+  .menu-list li {
+    margin: 10px 0;
+  }
+}
+/* Estilos adicionales para mejorar la legibilidad del número de teléfono y agregar un emoticono */
+.page-conocenos main article a {
+  font-size: 1.2em; /* Ajusta según tus preferencias */
+  display: flex;
+  align-items: center;
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Quitar subrayado del enlace */
+}
+
+.page-conocenos main article a::before {
+  content: "☎"; /* Unicode para el emoticono de teléfono */
+  font-size: 1.5em;
+  margin-right: 5px; /* Ajusta según tus preferencias */
+}
+
+/* Estilos de la tabla de comparación */
+.mr-table {
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+.mr-table th, .mr-table td {
+  padding: 10px;
+  background: linear-gradient(to right, #ec98e1, #7e2773);
+  color: #fff;
+  border: 2px solid #040404;
+  border-width: 3px;
+}
+
+.mr-table th {
+  text-align: center;
+}
+
+.mr-table tbody tr:nth-child(odd) {
+  background-color: #ec98e1;
+}
+
+.mr-table tbody tr:nth-child(odd) td {
+  border: 2px solid #ff00ff;
+  border-width: 3px;
+}
+
+.mr-video-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.mr-video {
+  width: 400px;
+  height: 300px;
+}
+
+.additional-content {
+  width: calc(100% - 420px); /* Ajusta según el ancho del video y el espacio deseado */
+  padding-left: 20px; /* Ajusta según el espaciado deseado */
+}
+
+/* Estilo de la tarjeta */
+.card {
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-img2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
 }
 
 /* Agregamos estilos específicos para la página de Ventajas */
 .ventajas-page .special-h2 {
-    /* Estilos especiales para h2 */
-    font-weight: bold;
-    font-size: 2.5em;
-    color: #ec98e1; /* Cambiar según tus preferencias */
-    margin-bottom: 20px;
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-    cursor: pointer; /* Añade un cursor de puntero al pasar por encima */
-    transition: color 0.3s ease; /* Agrega una transición al color al hacer hover */
+  /* Estilos especiales para h2 */
+  font-weight: bold;
+  font-size: 2.5em;
+  color: #ec98e1; /* Cambiar según tus preferencias */
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer; /* Añade un cursor de puntero al pasar por encima */
+  transition: color 0.3s ease; /* Agrega una transición al color al hacer hover */
 }
 
 .ventajas-page .special-h2::before {
-    /* Efecto de sombra */
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #ec98e1, #7e2773);
-    bottom: 0;
-    left: 0;
-    border-radius: 5px;
-    z-index: -1;
+  /* Efecto de sombra */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to right, #ec98e1, #7e2773);
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: -1;
 }
 
 .ventajas-page .special-h2:hover {
-    /* Cambia el color del texto al hacer hover */
-    color: #aa0b94;
+  /* Cambia el color del texto al hacer hover */
+  color: #aa0b94;
 }
 
 .ventajas-content .styled-paragraph {
-    /* Estilos para párrafos */
-    background-color: rgba(223, 94, 94, 0.8); /* Fondo blanco semitransparente */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+  /* Estilos para párrafos */
+  background-color: rgba(223, 94, 94, 0.8); /* Fondo blanco semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .ventajas-content .styled-list {
-    /* Estilos para listas */
-    list-style: none;
-    padding: 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
+  /* Estilos para listas */
+  list-style: none;
+  padding: 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .ventajas-content .styled-list li {
-    /* Estilos para elementos de lista */
-    position: relative;
-    padding-left: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Agrega una transición al color de fondo al hacer hover */
+  /* Estilos para elementos de lista */
+  position: relative;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agrega una transición al color de fondo al hacer hover */
 }
 
 .ventajas-content .styled-list li:hover {
-    /* Cambia el color de fondo al hacer hover */
-    background-color: rgba(0, 0, 0, 0.7);
+  /* Cambia el color de fondo al hacer hover */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 /* Estilos para tablas */
 .ventajas-content .styled-table {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .ventajas-content .styled-table th, .ventajas-content .styled-table td {
-    padding: 15px;
-    background: linear-gradient(to right, #ec98e1, #7e2773);
-    color: #ffffff;
-    border: 1px solid #040404;
+  padding: 15px;
+  background: linear-gradient(to right, #ec98e1, #7e2773);
+  color: #ffffff;
+  border: 1px solid #040404;
 }
 
 .ventajas-content .styled-table th {
-    text-align: center;
-    font-weight: bold;
+  text-align: center;
+  font-weight: bold;
 }
 
 .ventajas-content .styled-table tbody tr:nth-child(odd) {
-    background-color: #ec98e1;
+  background-color: #ec98e1;
 }
 
 .ventajas-content .styled-table tbody tr:nth-child(even) {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .ventajas-content .styled-table tbody tr td {
-    border: 1px solid #040404;
+  border: 1px solid #040404;
 }
 
 /* Hover effect */
 .ventajas-content .styled-table tbody tr:hover {
-    background-color: #ffccff; /* Cambia el color al hacer hover */
+  background-color: #ffccff; /* Cambia el color al hacer hover */
 }
 
 .image-table-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .image-wrapper {
-    flex: 1;
-    max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
-    margin-right: 20px; /* Espacio entre la imagen y la tabla */
+  flex: 1;
+  max-width: 300px; /* Ajusta el ancho máximo según tus necesidades */
+  margin-right: 20px; /* Espacio entre la imagen y la tabla */
 }
 
 .image-wrapper img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
 .table-wrapper {
-    flex: 2;
-    max-width: calc(100% - 340px); /* Ajusta según sea necesario para el espacio disponible */
+  flex: 2;
+  max-width: calc(100% - 340px); /* Ajusta según sea necesario para el espacio disponible */
 }
 
 .table.comparison-table {
-    width: 100%;
-    /* Añade estilos adicionales según tus preferencias */
+  width: 100%;
+  /* Añade estilos adicionales según tus preferencias */
 }
+
+/*# sourceMappingURL=style.css.map */
