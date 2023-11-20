@@ -9,7 +9,7 @@
 
 .mr-table th, .mr-table td {
     padding: 10px;
-    background: linear-gradient(to right, #ec98e1, #7e2773);
+    @include gradient-background(#ec98e1, #7e2773);
     color: #fff;
     border: 2px solid #040404;
     border-width: 3px;

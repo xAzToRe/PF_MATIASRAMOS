@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/* Define un mixin para los estilos de borde redondeado */
+/* Define un mixin para los estilos de gradiente */
+/* Define un mixin para los estilos de sombra */
+/* Define un mixin para los estilos de hover */
 /* Estilos generales */
 * {
   font-family: "Playfair Display", serif;
@@ -320,6 +324,7 @@ footer {
 .mr-table th, .mr-table td {
   padding: 10px;
   background: linear-gradient(to right, #ec98e1, #7e2773);
+  /* Agrega otros estilos necesarios */
   color: #fff;
   border: 2px solid #040404;
   border-width: 3px;
@@ -432,11 +437,15 @@ footer {
   /* Estilos para elementos de lista */
   position: relative;
   padding-left: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+  /* Fondo negro semitransparente */
   border-radius: 5px;
   margin-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease; /* Agrega una transición al color de fondo al hacer hover */
+}
+.ventajas-content .styled-list li:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Agrega otros estilos de hover necesarios */
 }
 
 .ventajas-content .styled-list li:hover {

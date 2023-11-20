@@ -1,0 +1,25 @@
+/* Define un mixin para los estilos de borde redondeado */
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+/* Define un mixin para los estilos de gradiente */
+@mixin gradient-background($start-color, $end-color) {
+    background: linear-gradient(to right, $start-color, $end-color);
+    /* Agrega otros estilos necesarios */
+}
+
+
+/* Define un mixin para los estilos de sombra */
+@mixin box-shadow($shadow) {
+    box-shadow: $shadow;
+}
+
+/* Define un mixin para los estilos de hover */
+@mixin hover-effect($hover-color) {
+    &:hover {
+        background-color: $hover-color;
+        /* Agrega otros estilos de hover necesarios */
+    }
+}
+

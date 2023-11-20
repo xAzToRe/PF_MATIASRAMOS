@@ -51,8 +51,8 @@
     /* Estilos para elementos de lista */
     position: relative;
     padding-left: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
-    border-radius: 5px;
+    @include hover-effect(rgba(0, 0, 0, 0.7)); /* Fondo negro semitransparente */
+    @include border-radius(5px);
     margin-bottom: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Agrega una transición al color de fondo al hacer hover */
